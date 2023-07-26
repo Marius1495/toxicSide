@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Layout</title>
+</head>
+<body>
+    <header>
+        <span><img  src="icons/toxicIcon.png" alt=""></span>
+          <span id="btn_img_pri">
+            <img  class="btn_menu1" id="btn_menu1" src="icons/bars.svg" alt="">
+            <img class="btn_menu2" id="btn_menu2" src="icons/xmark.png" alt="">
+
+        </span>
+        <div class="notionTime">     
+        </div>
+        <nav>
+            <ul id="ul_menuNormal">
+                <li> <a href="#">HOME</a></li>
+                <li> <a href="#">PRODUTOS</a></li>
+                <li> <a href="#">RESPONSABLILIDADES</a></li>
+                <li> <a href="#">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="navigationMore900 " data-navanime="right">
+    
+        <nav >
+            <ul id="ul_menu">
+                <li><img id="home" src="icons/archway.svg"  alt=""> <a href="#">HOME</a></li>
+                <li><img id="home" src="icons/file-lines.svg"  alt=""> <a href="#">PRODUTOS</a></li>
+                <li><img id="home" src="icons/lightbulb.svg"  alt=""><a href="#">RESPONSABLILIDADES</a></li>
+                <li><img id="home" src="icons/comments.svg"  alt=""><a href="#">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main data-animation="left">
+        <h1>Toxic Side</h1>
+        <h2>Seja feliz </h2>
+        <h2> Desperte o teu lado tóxico!</h2>
+        <h2>O teu melhor serviço de delivery de entorpecentes</h2>
+    </main>
+    <aside  data-animation="right">
+        <h2  data-animation="h2left" id="asideH2">Produtos</h2>
+            <div class="tiposG">
+                <div class="tipo">
+                    <h2>MD 1500</h2>
+                </div>
+                <div class="tipo">
+                    <h2>HAX choco</h2>
+                </div>
+                <div class="tipo">
+                    <h2>MRJ sweet</h2>
+                </div>
+            </div>
+    </aside>
+    <footer>
+        <h2>Rodapé</h2>
+        <div class="contacts">
+            <div id="zap">
+                <a href="wa.me/955145719">Whatsapp</a>
+            </div>
+            <div id="face">
+                <a href="https://facebook.com/MafudjeBáJau">Facebook</a>
+            </div>
+            <div id="insta">
+                <a href="https://instagram.com/MafudjeBáJau">Instagram</a>
+            </div>
+            <div id="github">
+                <a href="https://github.com/MafudjeBáJau">Github</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"  ></script>
+
+    <script>
+
+/* funcao para modo noite e dia automaticos */
+
+function autoTime()
+{
+    var data = new Date();
+    var hora = data.getHours(); 
+    var mins = data.getMinutes();
+     
+     
+    if(hora >= 7 & hora <= 18 )
+    {
+        
+        let body = document.querySelector('body')
+
+        body.style.backgroundColor = '#fff'
+
+
+        let btn_menu1 = document.querySelector('  #btn_menu1');
+        let btn_menu2 = document.querySelector(' #btn_menu2');
+
+        btn_menu1.style.filter = 'invert(0)'
+        btn_menu2.style.filter = 'invert(0)'
+
+
+         
+        timeAdd.style.filter = 'invert(1)'
+        
+        var elements = document.querySelectorAll(' header,main,aside,footer,.contacts a')
+      
+        elements.forEach(element => {
+            element.style.color = '#222'
+            element.style.backgroundColor = '#ccc';
+        });
+    }
+    else 
+    {
+        /*dia*/
+        /*bg-color = cinza
+        text-color = white*/
+
+        let body = document.querySelector('body')
+
+        body.style.backgroundColor = '#ccc'
+
+        let btn_menu1 = document.querySelector('  #btn_menu1');
+        let btn_menu2 = document.querySelector(' #btn_menu2');
+
+        btn_menu1.style.filter = 'invert(0)'
+        btn_menu2.style.filter = 'invert(0)'
+
+        timeAdd.style.filter = 'invert(0)'
+ 
+        elements.forEach(element => {
+            element.style.color = 'white'
+            element.style.backgroundColor = '#222'
+        });
+         
+    }
+   
+}
+autoTime();
+ 
+    </script>
+ 
+</body>
+</html>

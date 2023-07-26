@@ -1,0 +1,30 @@
+{
+    "usuarios":[
+
+
+        {   "nome":"Mafudje",
+            "idade":"22" 
+        }
+        ,
+        {   "nome":"Maf ",
+            "idade":"19"
+        }
+        ,
+        {   "nome":"Ana",
+            "idade":"62"
+        }
+        ,
+        {   "nome":"Aliu",
+            "idade":"27" 
+        }
+        ,
+        {
+            "nome":"Bass",
+            "idade":"30"
+        }
+       
+    ] 
+
+ 
+    
+}
